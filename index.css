@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+  background: antiquewhite;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.page {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (min-width:  900px){
+  .page{
+    width: 80vw;
+  } 
+}
+@media screen and (min-width:  1100px){
+  .page{
+    width: 70vw;
+  } 
+}
+
+.titleHolder {
+  display: inherit;
+  flex-flow: column wrap;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 13%;
+  /*border: thin black solid;*/
+}
+.title {
+  font-family: 'Martel', serif;
+  font-size: 300%;
+}
+
+.dealerHolder {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+}
+
+.playerHolder {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 60%; 
+  column-gap: 10px;
+  /*border: thin red solid;*/
+}
+
+.player {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: darkred;
+  width: 25%;
+  height: 40%;
+}
+.extraCardsHolder {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  height: auto;
+}
+.extraCardsHolderDealer {
+  position: absolute;
+  left: 60%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-flow: row;
+  width: 10%;
+  height: auto;
+  z-index: 5;
+}
+
+.extraCard {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+.extraCard:nth-child(even) {
+  /*left: 60%;*/
+  transform: translate(-45%, -100%);
+
+}
+
+.cardHolder {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+.dealerHolder .cardHolder {
+  width: 30%;
+}
+.dealerCards {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+.dealButton {
+  width: 15%;
+  height: 5%;
+  border-radius: 10px;
+  background-color: palegreen;
+  align-self: center;
+}
+
+.wager {
+  font-family: 'Martel', serif;
+  /*border: thin blue solid;*/
+  transform: translate(0%, 50%);
+  color: black;
+}
+.placeWagerPrompt {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  /*border: thin black solid;*/
+  gap: 5px;
+}
+.incrementWagerHolder {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.incrementButton {
+  width: 48%;
+  background: green;
+  color: white;
+}
+.minus {
+  background: red;
+}
+.placeWagerButton {
+  background: whitesmoke;
+  width: 100%;
+  padding-top: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 10px;
+  font-family: 'Martel', serif;
+}
+
+.card {
+  width: 45%;
+  height: 90%;
+  border: thin blue solid;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.valueHolder {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+  /*border: thin black solid;*/
+  padding-top: 10px;
+
+}
+.value {
+  color: black;
+  font-size: 120%;
+  font-family: 'Martel', serif;  
+}
+
+.optionHolder {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  column-gap: 3%;
+}
+.option {
+  font-family: 'Martel', serif;
+  color: black;
+}
+.optionButton {
+  background-color: whitesmoke;
+}
+
+.bankBalance {
+  font-family: 'Martel', serif;
+  color: darkgreen;
+}
+.nextRoundButton {
+  position: relative;
+  align-self: center;
+  width: 100px;
+  height: 50px;
+  background-color: cadetblue;
+  color: black;
+  border-radius: 20px;
+  border: thin black solid;
+}
+.nextRoundButton:hover {
+  color: antiquewhite;
+  filter: brightness(1.1);
+}
+/*======INTRO PAGE======*/
+.userInput {
+  /*border: thin black solid;*/
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.playerNumberInput{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap:  10px;
+}
+.playerCount {
+  height: 20%;
+}
+.startButton {
+  width: 20%;
+  height: 20px;
+  border-radius: 10px;
+  background-color: lawngreen;
+}
+/*======GAME OVER PAGE======*/
+
+.gameOver {
+  align-self: center;
+  
+}
+.gameOver h1 {
+  font-size: 300%;
+  font-family: 'Russo One', sans-serif;
+}
+
+.playerStatsHolder {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+.playerStats {
+  display: flex;
+  flex-flow: column;
+  width: auto;
+  align-self: center;
+  align-items: center;
+  padding: 10px;
+}
+.playerStats h2 {
+  color: black;
+  font-family: 'Russo One', sans-serif;
+}
+.stat {
+  font-family: 'Martel', serif;;
+}
+.endScreenButtonHolder {
+  padding-top: 20px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 10px;
+}
+.endScreenButton {
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  border: thin black outset;
+}
+#playAgain {
+  background-color: forestgreen;
+}
+#mainMenu {
+  background-color: red; 
+}
+.endScreenButton:hover {
+  filter: brightness(1.2);
+  color: whitesmoke;
+}
+
